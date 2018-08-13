@@ -45,8 +45,7 @@ gulp.task('sass', function(){
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({ 
-      outputStyle: 'nested',
-      includePaths: ['./node_modules/bootstrap/scss']
+      outputStyle: 'nested'
     })
       .on('error', $.sass.logError))
     // 編譯完成css
@@ -90,8 +89,7 @@ gulp.task('bower', function() {
 
 gulp.task('vendorJs', ['bower'], function () {
   return gulp.src([
-    './.tmp/vendors/**/**.js',
-    './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+    './.tmp/vendors/**/**.js'
   ])
   .pipe($.order([
     'jquery.js'
