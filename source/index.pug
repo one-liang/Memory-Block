@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Memory Block
+    link(rel="stylesheet", href="http://fonts.googleapis.com/earlyaccess/notosanstc.css")
+    link(rel="stylesheet", href="css/main.css")
+  body
+    .infos
+      h1 記憶方塊
+      h2 Memory Blocks
+      h3.status -
+    .blocks
+      .row
+        .block.block1(onclick="game.userSendInput('1')")
+        .block.block2(onclick="game.userSendInput('2')")
+      .row
+        .block.block3(onclick="game.userSendInput('3')")
+        .block.block4(onclick="game.userSendInput('4')")
+      .row
+        .inputStatus
+
+    script(src="js/main.js")
+    script(src="js/vendor.js")
